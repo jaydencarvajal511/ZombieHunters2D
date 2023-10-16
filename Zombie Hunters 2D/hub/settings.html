@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/hub/boilerplate.css">
+  <link rel="stylesheet" href="/hub/settings.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/hub/settings.js"></script>
+  <title>Settings</title>
+</head>
+<body>
+  <h1 class="main-header">Settings</h1>
+  <div class="container">
+    <div class="audio-settings">
+      <h1><u>Audio:</u></h1>
+      <div class="sounds">
+        <div>
+          <h2 class="sound-label">Shotgun SoundFX</h2>
+          <input id="shotgunSoundFX" type="range" min="0" max="100" value="100">
+        </div>
+        <div>
+          <h2 class="sound-label">Revolver SoundFX</h2>
+          <input id="revolverSoundFX" type="range" min="0" max="100" value="100">
+        </div>
+        <div>
+          <h2 class="sound-label">Musket SoundFX</h2>
+          <input id="musketSoundFX" type="range" min="0" max="100" value="100">
+        </div>
+        <div>
+          <h2 class="sound-label">Knife SoundFX</h2>
+          <input id="knifeSoundFX" type="range" min="0" max="100" value="100">
+        </div>
+        <div>
+          <h2 class="sound-label">Shotgun Equip SoundFX</h2>
+          <input id="shotgunEquipSoundFX" type="range" min="0" max="100" value="100">
+        </div>
+        <div>
+          <h2 class="sound-label">Revolver Equip SoundFX</h2>
+          <input id="revolverEquipSoundFX" type="range" min="0" max="100" value="100">
+        </div>
+        <div>
+          <h2 class="sound-label">Knife Equip SoundFX</h2>
+          <input id="knifeEquipSoundFX" type="range" min="0" max="100" value="100">
+        </div>
+        <div>
+          <h2 class="sound-label">Musket Equip SoundFX</h2>
+          <input id="musketEquipSoundFX" type="range" min="0" max="100" value="100">
+        </div>
+        <div>
+          <h2 class="sound-label">Reload SoundFX</h2>
+          <input id="reloadSoundFX" type="range" min="0" max="100" value="100">
+        </div>
+        <div>
+          <h2 class="sound-label">Zombie Hit SoundFX</h2>
+          <input id="zombieHitSoundFX" type="range" min="0" max="100" value="100">
+        </div>
+      </div>
+    </div>
+    <div class="keybind-settings">
+      <h1><u>Keybinds:</u></h1>
+      <div class="keybinds">
+          <h2>Move Forward: <kbd id="forward">w</kbd></h2>
+          <h2>Move Backwards: <kbd id="backwards">s</kbd></h2>
+          <h2>Move Left: <kbd id="left">a</kbd></h2>
+          <h2>Move Right: <kbd id="right">d</kbd></h2>
+          <h2>Toggle Weapon: <kbd id="toggle">q</kbd></h2>
+          <h2>Pick Up Ammo: <kbd id="ammo">e</kbd></h2>
+          <h2>Draw Knife: <kbd id="knife">SPACE</kbd></h2>
+          <h2>Use Medical Kit: <kbd id="medkit">1</kbd></h2>
+          <h2>Teleport: <kbd id="teleport">2</kbd></h2>
+          <h2>Throw Grenade: <kbd id="grenade">3</kbd></h2>
+          <h2>Draw Musket: <kbd id="musket">4</kbd></h2>
+      </div>
+    </div>
+  </div>
+
+  <h1 id="prompt">Press your new keybind</h1>
+
+  <a href="/hub/hub.html" class="home-button">Return</a>
+</body>
+</html>

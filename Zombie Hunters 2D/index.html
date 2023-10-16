@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+  <head>
+    <!--CSS-->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@500&display=swap');
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: rgb(47, 92, 64);
+        font-family: 'Lato', sans-serif;
+        font-family: 'Poppins', sans-serif;
+      }
+      canvas {
+        display: block;
+      }
+
+      .loadingclass {
+        text-align: center;
+        margin-top: 25%;
+        font-size: 4rem;
+      }
+    </style>
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/jpg" href="images/gamelogo.jpg">
+    <!--load p5-->
+    <script src="libs/p5.js"></script>
+    <script src="libs/p5.sound.js"></script>
+  </head>
+  <body>
+
+    <!-- loading screen -->
+    <div id="p5_loading" class="loadingclass">
+      <h2>Loading...</h2>
+    </div>
+
+    <!--load scripts-->
+    <script src="scripts/vars.js"></script>
+    <script src="scripts/collisions.js"></script>
+    <script src="scripts/classes.js"></script>
+    <script src="scripts/start.js"></script>
+    <script src="scripts/play.js"></script>
+
+    <script src="scripts/sketch.js"></script>
+  </body>
+</html>

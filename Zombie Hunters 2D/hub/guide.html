@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/hub/guide.css">
+  <link rel="stylesheet" href="/hub/boilerplate.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>How To Play</title>
+  <script>
+    $(document).ready(function(){
+      $('#guns').slideUp(10)
+      gunsDown = false
+      $('#powerUps').slideUp(10)
+      powerUpsDown = false
+      $('#zombies').slideUp(10)
+      zombiesDown = false
+    });
+    function gunsExpand() {
+      $('#powerUps').slideUp(10)
+      powerUpsDown = false
+      $('#zombies').slideUp(10)
+      zombiesDown = false
+      if (gunsDown == false) {
+        $('#guns').slideDown('fast')
+        gunsDown = true
+      } else if (gunsDown == true) {
+        $('#guns').slideUp('fast')
+        gunsDown = false
+      }
+    }
+    function powerUpsExpand() {
+      $('#guns').slideUp(10)
+      gunsDown = false
+      $('#zombies').slideUp(10)
+      zombiesDown = false
+      if (powerUpsDown == false) {
+        $('#powerUps').slideDown('fast')
+        powerUpsDown = true
+      } else if (powerUpsDown == true) {
+        $('#powerUps').slideUp('fast')
+        powerUpsDown = false
+      }
+    }
+    function zombiesExpand() {
+      $('#guns').slideUp(10)
+      gunsDown = false
+      $('#powerUps').slideUp(10)
+      powerUpsDown = false
+      if (zombiesDown == false) {
+        $('#zombies').slideDown('fast')
+        zombiesDown = true
+      } else if (zombiesDown == true) {
+        $('#zombies').slideUp('fast')
+        zombiesDown = false
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1 class="main-header">How To Play</h1>
+  <div class="general-container">
+    <div class="general">
+      <h2>Controls:</h2>
+      <ul>
+        <li>Use W, A, S, and D to move around the map</li>
+        <li>Left Click to shoot, but be mindful of your ammo</li>
+        <li>Use E to refill your ammo when standing on the ammo crates</li>
+        <li>Use Q to cycle through your weapons</li>
+        <li>Use SPACE to switch to a knife</li>
+        <li>Use ESC to pause</li>
+      </ul>
+    </div>
+    <div class="general">
+      <h2>Gameplay: </h2>
+      <ul>
+        <li>Kill zombies or die trying</li>
+        <li>After every round 1 more zombie spawns, quickly making a swarm</li>
+        <li>At round 5 you meet the raged & robust zombies</li>
+        <li>Use your quick thinking to reserve ammo without dying</li>
+        <li>You can use the gold you collect to buy powerups to help you survive</li>
+        <li>Have Fun (And don't die)</li>
+      </ul>
+    </div>
+  </div>
+  <h1 class="subheader">Reference</h1>
+  <div class="container">
+    <h2 onclick="gunsExpand()">Guns</h2>
+    <h2 onclick="powerUpsExpand()">Power Ups</h2>
+    <h2 onclick="zombiesExpand()">Zombies</h2>
+  </div>
+  <div id="guns" class="references">
+    <div class="revolver">
+      <h2>Revolver</h2>
+      <ul>
+          <li>6 Rounds of Ammo</li>
+          <li>25 Damage Per Shot</li>
+          <li>Reliable at all ranges</li>
+          <li>Reloads at ammo crate</li>
+      </ul>
+    </div>
+    <div class="shotgun">
+      <h2>Shotgun</h2>
+      <ul>
+        <li>5 Rounds of Ammo</li>
+        <li>Damage is range dependant</li>
+        <li>Max damage is 80</li>
+        <li>10 Damage per stab</li>
+      </ul>
+    </div>
+    <div class="knife">
+      <h2>Knife</h2>
+      <ul>
+        <li>Infinite Ammo</li>
+        <li>Only does damage within 75px</li>
+        <li>Range shown with a circle</li>
+        <li>Reloads at ammo crate</li>
+      </ul>
+    </div>
+  </div>
+  <div id="powerUps" class="references">
+    <div class="medical-kit">
+      <h2>Medical Kit</h2>
+      <ul>
+          <li>Heals 40 Heath Points</li>
+          <li>Bought In Shop (35¢)</li>
+          <li>Triggered by pressing 1</li>
+          <li> </li>
+      </ul>
+    </div>
+    <div class="teleport-ability">
+      <h2>Teleport Ability</h2>
+      <ul>
+          <li>Teleports player to cursor</li>
+          <li>Bought In Shop (35¢)</li>
+          <li>Triggered by pressing 2</li>
+          <li> </li>
+      </ul>
+    </div>
+    <div class="grenade">
+      <h2>Grenade</h2>
+      <ul>
+          <li>Kills everything in explosion (even player)</li>
+          <li>Bought In Shop (50¢)</li>
+          <li>Triggered by pressing 3</li>
+          <li> </li>
+      </ul>
+    </div>
+    <div class="musket">
+      <h2>Musket</h2>
+      <ul>
+          <li>6 Rounds of Ammo</li>
+          <li>60 Damage Per Shot</li>
+          <li>Reliable at all ranges</li>
+          <li>Reloads by buying ammo (25¢)</li>
+          <li>Bought In Shop (70¢)</li>
+          <li>Equips by pressing 4</li>
+      </ul>
+    </div>
+    <div class="Machine Gun">
+      <h2>Machine Gun</h2>
+      <ul>
+          <li>Infinite Rounds of Ammo</li>
+          <li>2 Damage Per Shot</li>
+          <li>Reliable at all ranges</li>
+          <li>Lasts 15 Seconds</li>
+          <li>Bought In Shop (70¢)</li>
+          <li>Equips by buying</li>
+      </ul>
+    </div>
+  </div>
+  <div id="zombies"  class="references">
+    <div class="zombie">
+      <h2>Zombie</h2>
+      <ul>
+          <li>Movement Speed: 0.8</li>
+          <li>Damage: 25</li>
+          <li>Health Points: 120 </li>
+      </ul>
+    </div>
+    <div class="raged-zombie">
+      <h2>Raged Zombie</h2>
+      <ul>
+          <li>Movement Speed: 1.0</li>
+          <li>Damage: 20</li>
+          <li>Health Points: 100 </li>
+      </ul>
+    </div>
+    <div class="robust-zombie">
+      <h2>Robust Zombie</h2>
+      <ul>
+          <li>Movement Speed: 0.6</li>
+          <li>Damage: 30</li>
+          <li>Health Points: 150 </li>
+      </ul>
+    </div>
+  </div>
+
+  <a href="/hub/hub.html" class="home-button">Return</a>
+</body>
+</html>

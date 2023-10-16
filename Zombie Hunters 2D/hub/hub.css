@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+}
+
+.container > div {
+  border: black 0.2rem solid;
+  border-radius: 0.4rem;
+  margin: 2rem;
+  padding: 2rem;
+  width: 20%;
+}
+.container > div > a > h2 {
+  text-decoration: underline;
+}
+
+.container > div > a > *, .container > div {
+  background-color: rgb(47, 92, 64)
+}
+
+@keyframes expand {
+  from {
+    box-shadow: 0 0 rgb(47, 92, 64);
+  }
+  to {
+    box-shadow: 1rem 1rem rgb(32, 63, 44);
+  }
+}
+
+@keyframes retract {
+  from {
+    box-shadow: 1rem 1rem rgb(32, 63, 44);
+  }
+  to {
+    box-shadow: 0 0 rgb(47, 92, 64);
+  }
+}
+
+.container > div:hover {
+  animation: expand 0.3s;
+  box-shadow: 1rem 1rem rgb(32, 63, 44);
+  cursor: pointer;
+}
+
+.container > div:not(:hover) {
+  animation: retract 0.3s;
+  box-shadow: 0 0 rgb(47, 92, 64);
+}
